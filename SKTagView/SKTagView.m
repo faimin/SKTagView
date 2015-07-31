@@ -224,10 +224,9 @@
         }
     }
     
-    [previewsView mas_makeConstraints:^(MASConstraintMaker *make)
-     {
+    [previewsView mas_makeConstraints:^(MASConstraintMaker *make) {
          SAVE_C(make.bottom.equalTo(superView.mas_bottom).with.offset(-bottomOffset));
-     }];
+    }];
     
     self.didSetup = YES;
 }
@@ -252,7 +251,8 @@
 
 - (void)setPreferredMaxLayoutWidth:(CGFloat)preferredMaxLayoutWidth
 {
-    if (preferredMaxLayoutWidth != _preferredMaxLayoutWidth) {
+    if (preferredMaxLayoutWidth != _preferredMaxLayoutWidth)
+    {
         _didSetup = NO;
         _preferredMaxLayoutWidth = preferredMaxLayoutWidth;
         [self setNeedsUpdateConstraints];
@@ -263,7 +263,7 @@
 {
     if (self.didClickTagAtIndex)
     {
-        self.didClickTagAtIndex([self.subviews indexOfObject:btn]);
+        self.didClickTagAtIndex([self.subviews indexOfObject:btn], btn);
     }
 }
 

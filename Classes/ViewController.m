@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "SKTagView.h"
 #import <Masonry/Masonry.h>
-#import <HexColors/HexColor.h>
+#import <HexColors.h>
 
 @interface ViewController ()
 @property (strong, nonatomic) SKTagView *tagView;
@@ -38,7 +38,7 @@
         view.insets    = 15;
         view.lineSpace = 10;
         __weak SKTagView *weakView = view;
-        view.didClickTagAtIndex = ^(NSUInteger index){
+        view.didClickTagAtIndex = ^(NSUInteger index, UIButton *button){
             //Remove tag
             [weakView removeTagAtIndex:index];
         };

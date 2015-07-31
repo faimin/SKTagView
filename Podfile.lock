@@ -1,13 +1,13 @@
 PODS:
-  - HexColors (2.2.1)
-  - Masonry (0.6.0)
+  - HexColors (2.3.0)
+  - Masonry (0.6.2)
 
 DEPENDENCIES:
   - HexColors
   - Masonry
 
 SPEC CHECKSUMS:
-  HexColors: abfd172e329dab59888614ccba6f216cec59289d
-  Masonry: 695dcee5cf90504cc83d85c40e0bd3f4376ed583
+  HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
+  Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
 
 COCOAPODS: 0.37.2

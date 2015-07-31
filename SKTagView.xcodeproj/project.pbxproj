@@ -160,10 +160,10 @@
 			children = (
 				682ABA931A3693BC00D57A1A /* SKTagView.h */,
 				682ABA941A3693BC00D57A1A /* SKTagView.m */,
-				E198883D944B29B6488A5B34 /* SKTag.m */,
 				E1988A206257CAF7FE6FC77A /* SKTag.h */,
-				E1988DC652E4B5A7DD3FC44D /* SKTagButton.m */,
+				E198883D944B29B6488A5B34 /* SKTag.m */,
 				E19884C2F2577114719748BD /* SKTagButton.h */,
+				E1988DC652E4B5A7DD3FC44D /* SKTagButton.m */,
 			);
 			name = SKTagView;
 			path = ../SKTagView;

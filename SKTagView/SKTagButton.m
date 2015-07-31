@@ -5,6 +5,7 @@
 
 #import "SKTagButton.h"
 #import "SKTag.h"
+#import <Masonry.h>
 
 @implementation SKTagButton
 
@@ -12,9 +13,12 @@
 {
 	SKTagButton *btn = [super buttonWithType:UIButtonTypeCustom];
 	
-	if (tag.attributedText) {
+	if (tag.attributedText)
+    {
 		[btn setAttributedTitle:tag.attributedText forState:UIControlStateNormal];
-	} else {
+	}
+    else
+    {
 		[btn setTitle:tag.text forState:UIControlStateNormal];
 		[btn setTitleColor:tag.textColor forState:UIControlStateNormal];
 		btn.titleLabel.font = tag.font ?: [UIFont systemFontOfSize:tag.fontSize];
@@ -44,6 +48,19 @@
     btn.layer.cornerRadius = tag.cornerRadius;
     btn.layer.masksToBounds = YES;
     
+    ///MARK:Add by ZD
+    btn.clipsToBounds = NO;
+    if (tag.showDeleteFlag)
+    {
+        UIImage *image = tag.deleteImage;
+        UIImageView *flagImageView = [[UIImageView alloc] initWithImage:image];
+        [btn addSubview:flagImageView];
+        [flagImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(btn.mas_right);
+            make.centerY.equalTo(btn.mas_top).offset(2);
+        }];
+    }
+
     return btn;
 }
 

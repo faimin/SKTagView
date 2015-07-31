@@ -9,7 +9,7 @@
 #import "TagsTableViewController.h"
 #import "TagsTableCell.h"
 #import "SKTagView.h"
-#import <HexColors/HexColor.h>
+#import <HexColors.h>
 
 #define SCREEN_WIDTH    ([UIScreen mainScreen].bounds.size.width)
 

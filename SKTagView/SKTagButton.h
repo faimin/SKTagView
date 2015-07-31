@@ -8,5 +8,7 @@
 
 @class SKTag;
 @interface SKTagButton : UIButton
+
 + (instancetype)buttonWithTag:(SKTag *)tag;
+
 @end
