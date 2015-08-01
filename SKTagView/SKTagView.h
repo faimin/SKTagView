@@ -11,9 +11,9 @@
 @interface SKTagView : UIView
 
 @property (nonatomic) UIEdgeInsets padding;
-@property (nonatomic) int lineSpace;
+@property (nonatomic) NSInteger lineSpace;
 @property (nonatomic) CGFloat insets;
-@property (nonatomic) CGFloat preferredMaxLayoutWidth;
+@property (nonatomic) CGFloat preferredMaxLayoutWidth;///<必须设置，否则布局会有问题
 @property (nonatomic) BOOL singleLine;
 
 - (void)addTag:(SKTag *)tag;
