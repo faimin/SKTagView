@@ -7,6 +7,13 @@
 #import "SKTag.h"
 #import <Masonry.h>
 
+@interface SKTagButton ()
+
+@property (strong,nonatomic) UIImageView *deleteImageView;
+
+@end
+
+
 @implementation SKTagButton
 
 + (instancetype)buttonWithTag:(SKTag *)tag
@@ -53,15 +60,26 @@
     if (tag.showDeleteFlag)
     {
         UIImage *image = tag.deleteImage;
-        UIImageView *flagImageView = [[UIImageView alloc] initWithImage:image];
-        [btn addSubview:flagImageView];
-        [flagImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        btn.deleteImageView = [[UIImageView alloc] initWithImage:image];
+        [btn addSubview:btn.deleteImageView];
+        [btn.deleteImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(btn.mas_right);
             make.centerY.equalTo(btn.mas_top).offset(2);
         }];
     }
 
     return btn;
+}
+
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event
+{
+    BOOL inSide = [super pointInside:point withEvent:event];
+    if (!inSide)
+    {
+        inSide = CGRectContainsPoint(_deleteImageView.frame, point);
+    }
+    
+    return inSide;
 }
 
 @end
