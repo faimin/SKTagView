@@ -60,7 +60,7 @@
          tag.fontSize = 15;
          //tag.font = [UIFont fontWithName:@"Courier" size:15];
          tag.padding = UIEdgeInsetsMake(13.5, 12.5, 13.5, 12.5);
-         tag.bgColor = [UIColor colorWithHexString:self.colorPool[idx % self.colorPool.count]];
+         tag.bgColor = [HXColor hx_colorWithHexRGBAString:self.colorPool[idx % self.colorPool.count]];
          tag.cornerRadius = 5;
          
          [self.tagView addTag:tag];
@@ -74,7 +74,7 @@
     tag.textColor = [UIColor whiteColor];
     tag.fontSize = 15;
     tag.padding = UIEdgeInsetsMake(13.5, 12.5, 13.5, 12.5);
-    tag.bgColor = [UIColor colorWithHexString:self.colorPool[arc4random() % self.colorPool.count]];
+    tag.bgColor = [HXColor hx_colorWithHexRGBAString:self.colorPool[arc4random() % self.colorPool.count]];
     tag.cornerRadius = 5;
     
     [self.tagView addTag:tag];
@@ -86,7 +86,7 @@
     tag.textColor = [UIColor whiteColor];
     tag.fontSize = 15;
     tag.padding = UIEdgeInsetsMake(13.5, 12.5, 13.5, 12.5);
-    tag.bgColor = [UIColor colorWithHexString:self.colorPool[arc4random() % self.colorPool.count]];
+    tag.bgColor = [HXColor hx_colorWithHexRGBAString:self.colorPool[arc4random() % self.colorPool.count]];
     tag.cornerRadius = 5;
     
     [self.tagView insertTag:tag atIndex:self.index.text.integerValue];

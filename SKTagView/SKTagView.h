@@ -22,7 +22,7 @@
 - (void)removeTagAtIndex:(NSUInteger)index;
 - (void)removeAllTags;
 
-@property (nonatomic, copy) void (^didClickTagAtIndex)(NSUInteger index, UIButton *button);
+@property (nonatomic, copy) void (^didClickTagAtIndex)(NSUInteger index, UIButton *selectedButton);
 
 @end
 

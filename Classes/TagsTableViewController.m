@@ -58,7 +58,7 @@ static NSString *const kTagsTableCellReuseIdentifier = @"TagsTableCell";
          tag.textColor = [UIColor whiteColor];
          tag.fontSize = 15;
          tag.padding = UIEdgeInsetsMake(13.5, 12.5, 13.5, 12.5);
-         tag.bgImg = [UIImage imageWithColor:[UIColor colorWithHexString:self.colorPool[idx % self.colorPool.count]]];
+         tag.bgImg = [UIImage imageWithColor:[HXColor hx_colorWithHexRGBAString:self.colorPool[idx % self.colorPool.count]]];
          tag.cornerRadius = 5;
          tag.enable = NO;
          

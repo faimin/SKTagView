@@ -5,9 +5,12 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
 @class SKTag;
+
+
 @interface SKTagButton : UIButton
+
+@property (nonatomic, copy) void(^deleteTag)();
 
 + (instancetype)buttonWithTag:(SKTag *)tag;
 

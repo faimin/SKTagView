@@ -13,16 +13,16 @@
 @property (nonatomic, strong) UIColor            *textColor;        ///<backgound color
 @property (nonatomic, strong) UIColor            *bgColor;
 @property (nonatomic, strong) UIImage            *bgImg;            ///<background image
-@property (nonatomic        ) CGFloat            cornerRadius;
+@property (nonatomic, assign) CGFloat            cornerRadius;
 @property (nonatomic, strong) UIColor            *borderColor;
-@property (nonatomic        ) CGFloat            borderWidth;
-@property (nonatomic        ) UIEdgeInsets       padding;           ///<like padding in css
+@property (nonatomic, assign) CGFloat            borderWidth;
+@property (nonatomic, assign) UIEdgeInsets       padding;           ///<like padding in css
 @property (nonatomic, strong) UIFont             *font;
-@property (nonatomic        ) CGFloat            fontSize;
-@property (nonatomic        ) BOOL               enable;            ///<default:YES
+@property (nonatomic, assign) CGFloat            fontSize;
+@property (nonatomic, assign) BOOL               enable;            ///<default:YES
 
-@property (nonatomic        ) BOOL    showDeleteFlag;               ///<显示删除按钮
-@property (nonatomic, strong) UIImage *deleteImage;                 ///<当显示删除按钮时，此属性必填
+@property (nonatomic, assign) BOOL    showDeleteMark;               ///<显示删除按钮
+@property (nonatomic, strong) UIImage *markImage;                 ///<当显示删除按钮时，此属性必填
 
 - (instancetype)initWithText:(NSString *)text;
 + (instancetype)tagWithText:(NSString *)text;

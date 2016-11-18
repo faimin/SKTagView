@@ -9,7 +9,7 @@
 
 @interface SKTagButton ()
 
-@property (strong,nonatomic) UIImageView *deleteImageView;
+@property (nonatomic, strong) UIImageView *deleteImageView;
 
 @end
 
@@ -55,11 +55,11 @@
     btn.layer.cornerRadius = tag.cornerRadius;
     btn.layer.masksToBounds = YES;
     
-    ///MARK:Add by ZD
+    ///MARK:Add by Zero.D.Saber
     btn.clipsToBounds = NO;
-    if (tag.showDeleteFlag)
+    if (tag.showDeleteMark)
     {
-        UIImage *image = tag.deleteImage;
+        UIImage *image = tag.markImage;
         btn.deleteImageView = [[UIImageView alloc] initWithImage:image];
         [btn addSubview:btn.deleteImageView];
         [btn.deleteImageView mas_makeConstraints:^(MASConstraintMaker *make) {
